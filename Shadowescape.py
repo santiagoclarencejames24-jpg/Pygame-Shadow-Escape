@@ -56,7 +56,7 @@ keys = pygame.sprite.Group()
 
 
 def draw_brick_pattern(surface, color):
-    """Draw a brick pattern on a surface"""
+    # Draw a brick pattern on a surface
     surface.fill(DARK_GRAY)
     # Draw brick outline
     pygame.draw.rect(surface, color, (0, 0, TILE_SIZE, TILE_SIZE), 3)
@@ -66,7 +66,7 @@ def draw_brick_pattern(surface, color):
 
 
 class Obstacle(pygame.sprite.Sprite):
-    """Wall/obstacle sprite"""
+    # Wall/obstacle sprite
     def __init__(self, x, y):
         super().__init__()
         self.image = pygame.Surface((TILE_SIZE, TILE_SIZE))
@@ -75,7 +75,7 @@ class Obstacle(pygame.sprite.Sprite):
 
 
 class Player(pygame.sprite.Sprite):
-    """Player sprite"""
+    # Player sprite
     def __init__(self, x, y):
         super().__init__()
         self.image = pygame.image.load("mainCharacter.png")
@@ -104,7 +104,7 @@ class Player(pygame.sprite.Sprite):
 
 
 class Enemy(pygame.sprite.Sprite):
-    """Enemy sprite"""
+    # Enemy sprite
     def __init__(self, x, y):
         super().__init__()
         self.image = pygame.image.load("ghost.png")
@@ -135,7 +135,7 @@ class Enemy(pygame.sprite.Sprite):
 
 
 class Door(pygame.sprite.Sprite):
-    """Door/exit sprite"""
+    # Door/exit sprite
     def __init__(self, x, y):
         super().__init__()
         self.image = pygame.Surface((TILE_SIZE, TILE_SIZE))
@@ -144,7 +144,7 @@ class Door(pygame.sprite.Sprite):
 
 
 class Key(pygame.sprite.Sprite):
-    """Collectible key sprite"""
+    # Collectible key sprite
     def __init__(self, x, y):
         super().__init__()
         self.image = pygame.Surface((TILE_SIZE, TILE_SIZE), pygame.SRCALPHA)
@@ -182,7 +182,7 @@ for key_x, key_y in key_positions:
 
 # Start screen
 def show_start_screen():
-    """Display the start screen"""
+    # Display the start screen
     font_title = pygame.font.Font(None, 100)
     font_subtitle = pygame.font.Font(None, 40)
     font_button = pygame.font.Font(None, 50)
